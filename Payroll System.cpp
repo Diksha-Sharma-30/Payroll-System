@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// Employee struct to hold employee information
+//hold employee information
 struct Employee {
     int id;
     string name;
@@ -18,10 +18,10 @@ struct Employee {
     double deductions;
 };
 
-// Global vector to hold employees
+// Global vector
 vector<Employee> employees;
 
-// Function to print with color
+
 void print_color(const string& text, const string& color) {
     if (color == "green") {
         cout << "\033[32m" << text << "\033[0m";
@@ -36,14 +36,14 @@ void print_color(const string& text, const string& color) {
     }
 }
 
-// Function to display a decorative header
+//header
 void display_header(const string& title) {
     print_color("=====================================\n", "cyan");
     print_color("      " + title + "\n", "green");
     print_color("=====================================\n", "cyan");
 }
 
-// Function to add a new employee
+//add new employee
 void add_employee() {
     display_header("Add New Employee");
 
@@ -67,7 +67,7 @@ void add_employee() {
     print_color("\nEmployee added successfully!\n", "green");
 }
 
-// Function to update an employee's work details
+//update an employee's work details
 void update_employee() {
     display_header("Update Employee Details");
 
@@ -90,7 +90,7 @@ void update_employee() {
     print_color("Employee not found!\n", "red");
 }
 
-// Function to display all employees in a table format
+//display all employees
 void display_employees() {
     display_header("Employee List");
 
@@ -104,7 +104,7 @@ void display_employees() {
     }
 }
 
-// Function to generate payroll for an employee
+//generate payroll for an employee
 void generate_payroll() {
     display_header("Generate Payroll");
 
@@ -128,7 +128,7 @@ void generate_payroll() {
     print_color("Employee not found!\n", "red");
 }
 
-// Function to remove an employee
+//remove
 void remove_employee() {
     display_header("Remove Employee");
 
@@ -146,7 +146,7 @@ void remove_employee() {
     print_color("Employee not found!\n", "red");
 }
 
-// Function to insert demo employees
+//insert demo employees
 void insert_demo_employees() {
     employees.push_back({1, "Diksha Sharma", "Developer", "Engineering", 5000, 0, 0, 0});
     employees.push_back({2, "David Lee", "Manager", "HR", 5500, 0, 0, 0});
@@ -154,7 +154,7 @@ void insert_demo_employees() {
     print_color("\nDemo employees added successfully!\n", "yellow");
 }
 
-// Main menu
+//Main menu
 void main_menu() {
     int choice;
     do {
